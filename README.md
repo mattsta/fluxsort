@@ -1,3 +1,14 @@
+
+### building / testing
+
+```bash
+mkdir build
+cd build
+cmake ..
+make
+./src/bench
+```
+
 Intro
 -----
 This document describes a hybrid mergesort / quicksort named fluxsort. The sort is stable, adaptive, branchless, and has exceptional performance. A [visualisation](https://github.com/scandum/fluxsort#visualization) and [benchmarks](https://github.com/scandum/fluxsort#benchmarks) are available at the bottom.
