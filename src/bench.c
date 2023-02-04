@@ -43,7 +43,7 @@
 
 // #define cmp(a,b) (*(a) > *(b)) // uncomment for fast primitive comparisons
 
-char *sorts[] = {"*", "qsort", "fluxsort"};
+char *sorts[] = {"*", "qsort", "quadsort", "fluxsort"};
 
 #if __has_include("blitsort.h")
 #include "blitsort.h" // curl "https://raw.githubusercontent.com/scandum/blitsort/master/src/blitsort.{c,h}" -o "blitsort.#1"
