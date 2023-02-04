@@ -238,8 +238,11 @@ void fluxsort(void *array, size_t nmemb, size_t size, CMPFUNC *cmp) {
     case sizeof(long long):
         return fluxsort64(array, nmemb, cmp);
 
+#if __amd64__
+        /* long double isn't native on non-x64 systems */
     case sizeof(long double):
         return fluxsort128(array, nmemb, cmp);
+#endif
 
     default:
         return assert(size == sizeof(char) || size == sizeof(short) ||

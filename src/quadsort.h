@@ -370,9 +370,12 @@ void quadsort(void *array, size_t nmemb, size_t size, CMPFUNC *cmp) {
         quadsort64(array, nmemb, cmp);
         return;
 
+#if __amd64__
+        /* long double isn't native on non-x64 systems */
     case sizeof(long double):
         quadsort128(array, nmemb, cmp);
         return;
+#endif
 
         //		case sizeof(struct256):
         //			quadsort256(array, nmemb, cmp);
